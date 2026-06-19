@@ -166,6 +166,11 @@
   ::selection {
     background-color: oklch(0.78 0.13 210 / 0.35);
   }
+
+  p,
+  li {
+    text-align: justify;
+  }
 }
 
 @layer utilities {

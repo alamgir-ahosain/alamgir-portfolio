@@ -7,7 +7,7 @@ export function Experience() {
     <section id="experience" className="section-pad">
       <div className="container-page">
         <SectionHeader
-          index="06 — Volunteer Experience"
+          index="05 — Volunteer Experience"
           title="Volunteer Experience"
           blurb="Community, leadership and impact work outside of code"
         />

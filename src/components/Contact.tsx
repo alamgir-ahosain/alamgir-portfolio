@@ -26,8 +26,8 @@ export function Contact() {
     <section id="contact" className="section-pad">
       <div className="container-page">
         <SectionHeader 
-        index="08 / contact" 
-        title="get_in_touch"           
+        index="07 — contact" 
+        title="Get In Touch"           
         blurb="Feel free to reach out for collaborations, opportunities, or just to say hello!"
         />
         <div className="grid gap-6 lg:grid-cols-[1.1fr_1fr]">
@@ -99,13 +99,7 @@ export function Contact() {
                 <div className="text-sm text-foreground break-all">{profile.email}</div>
               </div>
             </a>
-            <div className="flex items-center gap-3 rounded-md border border-border bg-surface p-4">
-              <MapPin className="h-5 w-5 text-syntax-var" />
-              <div>
-                <div className="font-mono text-[11px] text-muted-foreground">location</div>
-                <div className="text-sm text-foreground">{profile.location}</div>
-              </div>
-            </div>
+           
             <a
               href={profile.social.github}
               target="_blank"
@@ -115,7 +109,7 @@ export function Contact() {
               <GithubIcon className="h-5 w-5 text-foreground" />
               <div>
                 <div className="font-mono text-[11px] text-muted-foreground">github</div>
-                <div className="text-sm text-foreground">@{profile.handles.github}</div>
+                <div className="text-sm text-foreground">{profile.handles.github}</div>
               </div>
             </a>
             <a
@@ -127,7 +121,7 @@ export function Contact() {
               <LinkedinIcon className="h-5 w-5 text-syntax-fn" />
               <div>
                 <div className="font-mono text-[11px] text-muted-foreground">linkedin</div>
-                <div className="text-sm text-foreground">alamgir-hosain</div>
+                <div className="text-sm text-foreground">{profile.handles.linkedin}</div>
               </div>
             </a>
             <a

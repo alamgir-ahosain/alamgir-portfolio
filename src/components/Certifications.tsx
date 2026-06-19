@@ -21,7 +21,7 @@ export function Certifications() {
     <section id="certifications" className="section-pad">
       <div className="container-page">
         <SectionHeader
-          index="07 / learning"
+          index="06 — learning"
           title="certifications"
           blurb="Short courses I've completed to keep sharpening fundamentals. Click any card to enlarge."
         />

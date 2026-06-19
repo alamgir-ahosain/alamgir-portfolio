@@ -15,6 +15,7 @@ const FILTERS: Filter[] = ["All", "Academic", "Software", "Hardware"];
 
 export function Projects() {
   const [filter, setFilter] = useState<Filter>("All");
+  const [openKey, setOpenKey] = useState<string | null>(null);
   const expanded = projects.flatMap((p) =>
     p.categories.map((cat) => ({ ...p, _cat: cat, _key: `${p.title}-${cat}` })),
   );
@@ -42,17 +43,15 @@ export function Projects() {
                 key={f}
                 type="button"
                 onClick={() => setFilter(f)}
-                className={`inline-flex items-center gap-2 rounded-md border px-3 py-1.5 font-mono text-xs transition-colors ${
-                  active
+                className={`inline-flex items-center gap-2 rounded-md border px-3 py-1.5 font-mono text-xs transition-colors ${active
                     ? "border-primary bg-primary text-primary-foreground"
                     : "border-border-strong bg-surface text-foreground hover:bg-secondary"
-                }`}
+                  }`}
               >
                 <span>{f === "All" ? "All Projects" : f}</span>
                 <span
-                  className={`rounded px-1.5 py-0.5 text-[10px] ${
-                    active ? "bg-primary-foreground/20" : "bg-surface-elevated text-muted-foreground"
-                  }`}
+                  className={`rounded px-1.5 py-0.5 text-[10px] ${active ? "bg-primary-foreground/20" : "bg-surface-elevated text-muted-foreground"
+                    }`}
                 >
                   {count}
                 </span>
@@ -66,64 +65,89 @@ export function Projects() {
             No {filter.toLowerCase()} projects yet — check back soon.
           </p>
         ) : (
-        <div className="grid gap-6 lg:grid-cols-2">
-          {visible.map((p) => (
-            <article key={p._key} className="flex flex-col overflow-hidden rounded-lg border border-border bg-surface shadow-sm transition-colors hover:border-border-strong">
-              {/* <div className="aspect-[16/8] w-full overflow-hidden border-b border-border bg-surface-elevated">
-                <img
-                  src={p.cover}
-                  alt={`${p.title} cover`}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </div> */}
-              <div className="flex flex-1 flex-col gap-5 p-6">
-                <header>
-                  <div className="mb-2 font-mono text-xs text-syntax-comment">{p.date}</div>
-                  <h3 className="text-2xl font-semibold text-foreground">{p.title}</h3>
-                  <p className="mt-2 text-pretty text-base leading-relaxed text-muted-foreground">
-                    {p.description}
-                  </p>
-                </header>
+          <div className="grid gap-6 lg:grid-cols-2">
+            {visible.map((p) => {
+              const isOpen = openKey === p._key;
+              return (
+                <article
+                  key={p._key}
+                  onClick={() => setOpenKey(isOpen ? null : p._key)}
+                  className={`group flex cursor-pointer flex-col overflow-hidden rounded-lg border bg-surface shadow-sm transition-all ${isOpen ? "border-primary" : "border-border hover:border-border-strong"
+                    }`}
+                >
+                  <div className="flex flex-1 flex-col gap-4 p-6">
+                    <header className="flex items-start justify-between gap-3">
+                      <div className="min-w-0">
+                        <div className="mb-1 font-mono text-xs text-syntax-comment">{p.date}</div>
+                        <h3 className="text-xl font-semibold text-foreground">{p.title}</h3>
+                      </div>
+                      <span className="shrink-0 rounded-full border border-border bg-surface-elevated px-3 py-1 font-mono text-[11px] text-muted-foreground">
+                        {p._cat}
+                      </span>
+                    </header>
 
-                <ul className="space-y-1.5 font-mono text-sm">
-                  {p.highlights.map((h) => (
-                    <li key={h} className="flex gap-2 text-muted-foreground">
-                      <span className="text-syntax-string">✓</span>
-                      <span>{h}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <ul className="flex flex-wrap gap-1.5">
-                  {p.tech.map((t) => (
-                    <li
-                      key={t}
-                      className="rounded-md border border-border bg-surface-elevated px-2 py-0.5 font-mono text-[11px] text-syntax-fn"
+                    <p
+                      className={`text-pretty text-sm leading-relaxed text-muted-foreground ${isOpen ? "" : "line-clamp-2 group-hover:line-clamp-none"
+                        }`}
                     >
-                      {t}
-                    </li>
-                  ))}
-                </ul>
+                      {p.description}
+                    </p>
 
-                <div className="mt-auto flex flex-wrap gap-2 border-t border-border pt-4">
-                  {p.links.map((l) => (
-                    <a
-                      key={l.label}
-                      href={l.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-md border border-border-strong bg-surface px-3 py-1.5 font-mono text-xs text-foreground transition-colors hover:bg-secondary"
+                    <div
+                      className={`grid transition-all duration-300 ${isOpen
+                          ? "grid-rows-[1fr] opacity-100"
+                          : "grid-rows-[0fr] opacity-0 group-hover:grid-rows-[1fr] group-hover:opacity-100"
+                        }`}
                     >
-                      {l.label}
-                      <ExternalLink className="h-3 w-3" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+                      <div className="flex min-h-1 flex-col gap-5 overflow-hidden">
+                        {p.highlights.length > 0 && (
+                          <ul className="flex flex-col gap-1">
+                            {p.highlights.map((h) => (
+                              <li
+                                key={h}
+                                className="flex items-start gap-2 font-mono text-[13px] text-muted-foreground"
+                              >
+                                <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                                {h}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                        <ul className="flex flex-wrap gap-1.5">
+                          {p.tech.map((t) => (
+                            <li
+                              key={t}
+                              className="rounded-full border border-border bg-surface-elevated px-2.5 py-0.5 font-mono text-[11px] text-syntax-fn"
+                            >
+                              {t}
+                            </li>
+                          ))}
+                        </ul>
+
+
+
+                        <div className="flex flex-wrap gap-2 border-t border-border pt-3">
+                          {p.links.map((l) => (
+                            <a
+                              key={l.label}
+                              href={l.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              className="inline-flex items-center gap-1.5 rounded-md border border-border-strong bg-surface px-3 py-1.5 font-mono text-xs text-foreground transition-colors hover:bg-secondary"
+                            >
+                              {l.label}
+                              <ExternalLink className="h-3 w-3" />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
         )}
       </div>
     </section>

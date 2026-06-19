@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { Download, Mail } from "lucide-react";
 import { profile } from "@/data/profile";
 
+
+
+
 const LINES = [
   { cmd: "whoami", out: "alamgir hosain" },
   { cmd: "cat role.txt", out: "backend developer · java & spring boot" },
@@ -50,7 +53,7 @@ function Prompt() {
       <span className="text-syntax-string">alamgir@linux</span>
       <span className="text-foreground">:</span>
       <span className="text-syntax-fn">~</span>
-      <span className="text-foreground">$ </span>
+      <span className="text-foreground"># </span>
     </span>
   );
 }
@@ -64,30 +67,29 @@ export function Hero() {
       <div className="container-page relative grid gap-10 pt-16 pb-20 md:grid-cols-[1.1fr_1fr] md:gap-12 md:pt-24 md:pb-28">
         <div className="flex flex-col justify-center">
           {/* <p className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 font-mono text-xs text-muted-foreground">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            available for backend roles · summer 2026
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" /> available for backend roles · summer 2026
           </p> */}
 
           <h1 className="text-balance text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
             <span className="text-foreground">{profile.name}</span>
           </h1>
           <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-            {/* <span className="text-syntax-comment font-mono">{"//"}</span> */}
-            {profile.intro}
+            {/* <span className="text-syntax-comment font-mono">{"// "}</span> */}
+            <b>Computer Science</b> {profile.intro}
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center md:justify-start gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
               href={profile.resumeUrl}
               download
               className="inline-flex items-center gap-2 rounded-md border border-border-strong bg-surface px-5 py-2.5 font-mono text-sm text-foreground transition-colors hover:bg-secondary"
             >
               <Download className="h-4 w-4" />
-              Download Resume
+             Download Resume
             </a>
           </div>
 
-          {/* <div className="mt-8 flex items-center gap-4 text-muted-foreground">
+          {/* <div className="mt-8 flex items-center justify-center gap-4 text-muted-foreground">
             <a href={profile.social.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="hover:text-foreground">
               <Github className="h-5 w-5" />
             </a>
@@ -99,8 +101,7 @@ export function Hero() {
             </a>
           </div> */}
         </div>
-
-        {/* Linux terminal window */}
+          {/* Linux terminal window */}
         <div className="code-window">
           <div className="code-window-header">
             {/* <span className="traffic-light bg-destructive" /> */}

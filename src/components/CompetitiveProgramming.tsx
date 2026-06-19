@@ -1,20 +1,27 @@
-import { ExternalLink, Trophy } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { cpStats } from "@/data/cp";
 import { SectionHeader } from "./SectionHeader";
+import { CodeForcesIcon, CodeChefIcon, VjudgeIcon } from "@/components/Icons";
 
 const ACCENT = ["text-syntax-fn", "text-syntax-string", "text-syntax-var"];
+
+const PLATFORM_ICONS = {
+  Codeforces: CodeForcesIcon,
+  CodeChef: CodeChefIcon,
+  VJudge: VjudgeIcon,
+} as const;
 
 export function CompetitiveProgramming() {
   return (
     <section id="cp" className="section-pad">
       <div className="container-page">
         <SectionHeader
-          index="05 / competitive"
-          title="competitive_programming"
-          blurb="Years of practice across the big online judges — algorithms, data structures, and contest math."
+          index="04 — competitive"
+          title="Competitive Programming"
+          blurb="Years of practice across the big online judges - algorithms, data structures, and contest math."
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {cpStats.map((s, i) => (
+        {cpStats.map((s, i) => (
             <a
               key={s.platform}
               href={s.url}
@@ -23,7 +30,6 @@ export function CompetitiveProgramming() {
               className="group rounded-lg border border-border bg-surface p-6 transition-colors hover:border-border-strong"
             >
               <div className="flex items-start justify-between">
-                <Trophy className={`h-5 w-5 ${ACCENT[i]}`} />
                 <ExternalLink className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-foreground" />
               </div>
               <div className="mt-4 font-mono text-xs text-muted-foreground">{s.platform}</div>
@@ -32,8 +38,8 @@ export function CompetitiveProgramming() {
               <div className="mt-4 font-mono text-xs text-foreground">@{s.handle}</div>
             </a>
           ))}
-        </div>
       </div>
-    </section>
+    </div>
+    </section >
   );
 }

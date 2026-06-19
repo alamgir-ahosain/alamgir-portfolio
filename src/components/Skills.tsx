@@ -16,7 +16,7 @@ export function Skills() {
     <section id="skills" className="section-pad">
       <div className="container-page">
         <SectionHeader
-          index="02 / skills"
+          index="02 — skills"
           title="skills"
           blurb="Tools and technologies I use"
         />

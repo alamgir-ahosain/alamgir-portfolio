@@ -14,7 +14,6 @@ export const timeline: TimelineItem[] = [
     period: "2024 – Present",
     bullets: [
       "Organized 20+ cleanliness drives across the campus and city",
-      "Led planting of 100+ trees",
       "Managed fundraising and budget oversight",
     ],
   },
@@ -33,7 +32,7 @@ export const timeline: TimelineItem[] = [
     role: "Member",
     org: "BD Clean, Tangail",
     period: "2024 – 2025",
-    bullets: ["Participated in 4 divisional cleanliness drives"],
+    bullets: ["Participated in 4 divisional cleanliness events"],
   },
 ];
 

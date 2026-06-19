@@ -38,7 +38,7 @@ export const certifications: Certification[] = [
     title: "5-Day AI Agents Intensive Course",
     issuer: "Google × Kaggle",
     image: googleImg,
-    url: "https://www.kaggle.com/learn-guide/5-day-genai",
+    url: "https://www.kaggle.com/certification/badges/zvbbgdhddhdgsg/105",
   },
 
   {
