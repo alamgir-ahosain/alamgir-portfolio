@@ -49,7 +49,27 @@ export const projects: Project[] = [
       { label: "YouTube Demo", url: "#" },
     ],
     accent: "accent",
-    categories: ["Academic", "Software"],
+    categories: [ "Software"],
     // cover:   "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=70",
+  },
+
+
+  // Academic
+  {
+    title: "Courseworks",
+    date: "Mar 2026",
+    description:
+      "Academic course and lab work.",
+    highlights: [
+      "MBSTU CSE Batch 18",
+      "Session 2020-21",
+
+    ],
+    tech: ["Programming", "Computer Networking", "AI", "Computer Architecture,", "Software Development", "Graphics","Security"],
+    links: [
+      { label: "View on GitHub", url: "https://github.com/MBSTU-CSE18-Courses" },
+    ],
+    accent: "accent",
+    categories: ["Academic"],
   },
 ];

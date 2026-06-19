@@ -27,7 +27,7 @@ export function Projects() {
         <SectionHeader
           index="03 — Projects"
           title="Projects"
-          blurb="Selected backend work — APIs, real-time systems, and the engineering practices around them."
+          blurb="A collection of my software, academic, and hardware projects"
         />
 
         <div className="mb-8 flex flex-wrap justify-center gap-2">

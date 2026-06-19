@@ -10,16 +10,15 @@ export function About() {
         <div className="grid gap-8 md:grid-cols-[1.4fr_1fr]">
           <div className="rounded-xl border border-border bg-surface p-6 md:p-8">
             <p className="text-base leading-relaxed text-foreground">
-              I'm {profile.name}, a final-year Computer Science &amp; Engineering
-              undergrad at {profile.education.school}. I build reliable backend
+              I'm {profile.name}, a  Computer Science &amp; Engineering
+              fresh graduate at <b>{profile.education.school}</b>. I build reliable backend
               systems with Java and Spring Boot, with a focus on clean APIs,
-              meaningful tests, containerized deploys, and CI/CD that catches
+              meaningful tests, containerized deploys and CI/CD that catches
               issues before users do.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Lately I've been going deeper into DevOps — Docker, GitHub Actions,
-              and Linux tooling. Outside of code I write technical blogs and help
-              lead a campus cleanliness club focused on environmental impact.
+              Lately I've been going deeper into DevOps - Docker, GitHub Actions,
+              and Linux tooling. Outside of code, I share knowledge through technical blogs and enjoy exploring anime.
             </p>
           </div>
 
@@ -41,6 +40,13 @@ export function About() {
               label="Location"
               value={profile.location}
             />
+              {/* <Fact
+              icon={<MapPin className="h-4 w-4" />}
+              label="Location"
+              value={profile.location}
+            /> */}
+            
+            
           </div>
         </div>
       </div>

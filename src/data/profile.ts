@@ -1,11 +1,13 @@
+
+import myResume from "../assets/others/Alamgir_Hosain_Resume.pdf";
+
 export const profile = {
   name: "Alamgir Hosain",
-  tagline: "Backend Developer · Java & Spring Boot · DevOps Enthusiast",
-  intro:
-    "Final-year CSE undergrad specializing in backend development and modern engineering practices, with a growing interest in DevOps.",
-  location: "Tangail, Bangladesh",
-  email: "alamgir.hosain.dev@gmail.com", // update if different
-  resumeUrl: "/resume.pdf",
+  tagline: "Backend Developer · Java & Spring Boot",
+  intro: "Computer Science graduate experienced in backend development and modern engineering practices. Specializing in Java and Spring Boot.",
+  location: "Mymensingh, Bangladesh",
+  email: "alamgir.ahosain@gmail.com", 
+  resumeUrl: myResume,
   social: {
     github: "https://github.com/alamgir-ahosain",
     linkedin: "https://www.linkedin.com/in/alamgir-hosain/",
@@ -25,8 +27,7 @@ export const profile = {
   education: {
     school: "Mawlana Bhashani Science and Technology University",
     degree: "B.Sc. in Computer Science & Engineering",
-    period: "March 2022 – June 2026 (expected)",
+    period: "March 2022 – June 2026",
     cgpa: "3.40 / 4.00",
-    status: "Coursework completed · final defense pending",
-  },
+    },
 };

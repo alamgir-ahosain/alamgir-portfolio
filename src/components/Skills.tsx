@@ -18,7 +18,7 @@ export function Skills() {
         <SectionHeader
           index="02 / skills"
           title="skills"
-          blurb="Tools and technologies I reach for, grouped by where they live in the stack."
+          blurb="Tools and technologies I use"
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((g, gi) => (

@@ -9,7 +9,7 @@ export function Experience() {
         <SectionHeader
           index="06 — Volunteer Experience"
           title="Volunteer Experience"
-          blurb="Community, leadership, and impact work outside of code."
+          blurb="Community, leadership and impact work outside of code"
         />
         <ol className="relative space-y-8 border-l border-border pl-6">
           {timeline.map((item, i) => {
