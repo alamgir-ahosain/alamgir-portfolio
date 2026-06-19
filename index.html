@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.ico" /> -->
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary meta -->
+    <title>Alamgir Hosain</title>
+    <meta
+      name="description"
+      content="Portfolio of Alamgir Hosain — final-year CSE undergrad and backend developer building reliable APIs with Java, Spring Boot, and modern DevOps practices."
+    />
+    <meta name="author" content="Alamgir Hosain" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Alamgir Hosain — Backend Developer" />
+    <meta
+      property="og:description"
+      content="Backend APIs, Spring Boot, DevOps, and competitive programming. See projects, GitHub activity, and contact."
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--
+      Theme flash prevention — runs before React mounts.
+      Reads localStorage → falls back to OS preference → defaults dark.
+      Must be inline/synchronous so it fires before first paint.
+    -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (dark) document.documentElement.classList.add("dark");
+        } catch (e) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
