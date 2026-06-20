@@ -81,7 +81,7 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
               href={profile.resumeUrl}
-              download
+              download="Alamgir_Hosain_Resume"
               className="inline-flex items-center gap-2 rounded-md border border-border-strong bg-surface px-5 py-2.5 font-mono text-sm text-foreground transition-colors hover:bg-secondary"
             >
               <Download className="h-4 w-4" />

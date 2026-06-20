@@ -117,7 +117,7 @@ export const projects: Project[] = [
 
 
   {
-    title: "Dynamic PDF Generator)",
+    title: "Dynamic PDF Generator",
     date: "",
     description:
       "PDF Template Designer is a C# application that allows users to fill templates with data and generate customized PDFs.",

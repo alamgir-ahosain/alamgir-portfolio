@@ -11,7 +11,7 @@ const ACCENT_DOT: Record<string, string> = {
 };
 
 type Filter = "All" | ProjectCategory;
-const FILTERS: Filter[] = ["All", "Academic", "Software", "Hardware"];
+const FILTERS: Filter[] = ["All", "Software","Academic", "Hardware"];
 
 export function Projects() {
   const [filter, setFilter] = useState<Filter>("All");
