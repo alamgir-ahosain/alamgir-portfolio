@@ -17,44 +17,79 @@ export const projects: Project[] = [
 
   //________________________________ Software_____________________________
   {
-    title: "Logistics Platform API",
+    title: "MBSTU DiningPass",
     date: "",
     description:
-    "A backend API platform for managing logistics operations (locations, storage, products, routes, demands).",
+        "A web-enabled dining management platform for MBSTU that digitizes hall dining by replacing manual meal coupons with online meal booking, QR-based meal verification, and role-based access control.",
     highlights: [
-      "Dockerized and deployed on Render",
-      "CI/CD pipeline with GitHub Actions",
-      "Tested with JUnit 5 (exception handling & input validation)",
+      "Online meal booking with bKash payment integration",
+      "Automatic QR token generation and meal verification",
+      "Real-time meal summary reporting with Redis caching",
+      "JUnit 5 unit testing and GitHub Actions CI/CD pipeline",
     ],
-    tech: ["Spring Boot", "PostgreSQL", "Docker", "GitHub Actions", "JUnit 5"],
+    tech: [
+      "Spring Boot",
+      "React",
+      "PostgreSQL",
+      "Redis",
+      "Firebase Authentication",
+      "Docker",
+      "GitHub Actions",
+      "JUnit 5",
+    ],
     links: [
-      // { label: "Swagger Docs", url: "#" },
-      // { label: "Postman Collection", url: "#" },
-      { label: "View on GitHub", url: "https://github.com/alamgir-ahosain/logistics-platform" },
+      {
+        label: "Live Demo",
+        url: "https://mbstudiningpass.netlify.app",
+      },
+      {
+        label: "View on GitHub",
+        url: "https://github.com/alamgir-ahosain/MBSTU_DiningPass/tree/main",
+      },
     ],
     accent: "primary",
     categories: ["Software"],
-    // cover:"https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1200&q=70",
+    // cover: "",
   },
-  {
-    title: "Server Monitoring Dashboard",
-    date: "",
-    description:
-      "Real-time monitoring platform that connects to remote Linux servers via SSH, collects CPU / memory / disk metrics, and visualizes them in a React dashboard.",
-    highlights: [
-      "Secure SSH connections via JSch",
-      "Real-time metric fetching with a Spring Boot REST API",
-      "React frontend with live-updating charts",
-    ],
-    tech: ["Spring Boot", "JSch", "React"],
-    links: [
-      { label: "View on GitHub", url: "https://github.com/alamgir-ahosain/network-monitoring-system" },
-      // { label: "YouTube Demo", url: "#" },
-    ],
-    accent: "accent",
-    categories: ["Software"],
-    // cover:   "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=70",
-  },
+  // {
+  //   title: "Logistics Platform API",
+  //   date: "",
+  //   description:
+  //   "A backend API platform for managing logistics operations (locations, storage, products, routes, demands).",
+  //   highlights: [
+  //     "Dockerized and deployed on Render",
+  //     "CI/CD pipeline with GitHub Actions",
+  //     "Tested with JUnit 5 (exception handling & input validation)",
+  //   ],
+  //   tech: ["Spring Boot", "PostgreSQL", "Docker", "GitHub Actions", "JUnit 5"],
+  //   links: [
+  //     // { label: "Swagger Docs", url: "#" },
+  //     // { label: "Postman Collection", url: "#" },
+  //     { label: "View on GitHub", url: "https://github.com/alamgir-ahosain/logistics-platform" },
+  //   ],
+  //   accent: "primary",
+  //   categories: ["Software"],
+  //   // cover:"https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1200&q=70",
+  // },
+  // {
+  //   title: "Server Monitoring Dashboard",
+  //   date: "",
+  //   description:
+  //     "Real-time monitoring platform that connects to remote Linux servers via SSH, collects CPU / memory / disk metrics, and visualizes them in a React dashboard.",
+  //   highlights: [
+  //     "Secure SSH connections via JSch",
+  //     "Real-time metric fetching with a Spring Boot REST API",
+  //     "React frontend with live-updating charts",
+  //   ],
+  //   tech: ["Spring Boot", "JSch", "React"],
+  //   links: [
+  //     { label: "View on GitHub", url: "https://github.com/alamgir-ahosain/network-monitoring-system" },
+  //     // { label: "YouTube Demo", url: "#" },
+  //   ],
+  //   accent: "accent",
+  //   categories: ["Software"],
+  //   // cover:   "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=70",
+  // },
 
 
 

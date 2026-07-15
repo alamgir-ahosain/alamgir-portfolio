@@ -3,7 +3,9 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
-import { CompetitiveProgramming } from "@/components/CompetitiveProgramming";
+// import { CompetitiveProgramming } from "@/components/CompetitiveProgramming"
+import { Hackathon } from "@/components/Hackathon";
+
 import { Experience } from "@/components/Experience";
 import { Certifications } from "@/components/Certifications";
 import { Contact } from "@/components/Contact";
@@ -19,7 +21,8 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
-        <CompetitiveProgramming />
+        {/*<CompetitiveProgramming />*/}
+        <Hackathon />
         <Experience />
         <Certifications />
         <Contact />

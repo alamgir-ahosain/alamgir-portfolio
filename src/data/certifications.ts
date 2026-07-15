@@ -16,7 +16,7 @@ export type Certification = {
 
 export const certifications: Certification[] = [
   {
-    title: "HACKFUSION 2026",
+    title: "HACKFUSION 2026 – INNONATION National Hackathon",
     issuer: "IEEE Computer Society LU SB Chapter",
     image: luhackathonImg,
     // url: "https://www.kaggle.com/learn-guide/5-day-genai",

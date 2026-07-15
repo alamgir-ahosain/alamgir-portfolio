@@ -1,5 +1,5 @@
 
-import myResume from "../assets/others/Alamgir_Hosain_Resume.pdf";
+import myResume from "../assets/others/Resume_Alamgir_Hosain.pdf"
 
 export const profile = {
   name: "Alamgir Hosain",
@@ -30,6 +30,6 @@ export const profile = {
     school: "Mawlana Bhashani Science and Technology University",
     degree: "B.Sc. in Computer Science & Engineering",
     period: "March 2022 – June 2026",
-    cgpa: "3.40 / 4.00",
+    cgpa: "3.42 / 4.00",
     },
 };

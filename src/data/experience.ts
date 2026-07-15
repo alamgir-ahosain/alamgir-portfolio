@@ -11,10 +11,10 @@ export const timeline: TimelineItem[] = [
     kind: "volunteer",
     role: "Treasurer",
     org: "MBSTU Clean Club",
-    period: "2024 – Present",
+    period: "2024 – 2026",
     bullets: [
-      "Organized 20+ cleanliness drives across the campus and city",
-      "Managed fundraising and budget oversight",
+      "Organized 20+ cleanliness events across the university campus",
+      "Managed fundraising initiatives",
     ],
   },
   {
